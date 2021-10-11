@@ -1,0 +1,8 @@
+﻿CREATE TABLE [dbo].[User]
+(
+    [UserId] VARCHAR(50) NOT NULL PRIMARY KEY, 
+    [Password] VARCHAR(255) NOT NULL, 
+    [Name] VARCHAR(128) NOT NULL, 
+    [Role] VARCHAR(20) NOT NULL, 
+    [CreatedDate] DATETIME NOT NULL DEFAULT GETUTCDATE()
+)
