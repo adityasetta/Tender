@@ -37,6 +37,12 @@
             try
             {
                 var result = await _userService.AuthenticateUser(request).ConfigureAwait(false);
+
+                if (result == null)
+                {
+                    return this.Unauthorized("Authentication Failed");
+                }
+
                 return result;
             }
             catch (Exception ex)
