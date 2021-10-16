@@ -5,7 +5,7 @@
 
     public class AuthenticationResponse
     {
-        public AuthenticationResponse(User user, string token, int expiresIn)
+        public AuthenticationResponse(User user, string token, int expiresIn = 3600)
         {
             UserId = user.UserId;
             Name = user.Name;
